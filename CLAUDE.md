@@ -10,8 +10,8 @@ lives in the separate host repo **`outcast1000/viboplr`** (likely not checked ou
 here). This repo contains the P2P Sharing plugin's **JavaScript UI shell** and
 ships it as a versioned release the host app auto-updates.
 
-- **Plugin id:** `p2p-sharing` (set in `manifest.json`). An installed copy with
-  this id overrides the app's bundled built-in copy.
+- **Plugin id:** `p2p-sharing` (set in `manifest.json`). Installed from the
+  Viboplr plugin gallery (it is not bundled in the app).
 
 ## ⚠️ CRITICAL: this is a thin shell over host-app Rust — read before editing
 
@@ -62,6 +62,4 @@ The host runs `index.js` as the body of `new Function("api", "window", "globalTh
 
 See `README.md` → *Develop & Release*: bump version (and `minAppVersion` by hand
 if needed), update `CHANGELOG.md`, push a tag `vX.Y.Z` (or run the *Release*
-Action). CI builds `p2p.zip` + `update.json` and publishes. The host bundles a
-baseline copy at `src-tauri/plugins/p2p-sharing/` — sync the files back after a
-release.
+Action). CI builds `p2p.zip` + `update.json` and publishes.

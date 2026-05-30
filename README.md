@@ -2,8 +2,8 @@
 
 Search, stream, and download tracks from other Viboplr users over peer-to-peer.
 
-Plugin id: `p2p-sharing` (so an installed copy overrides the app's bundled
-built-in of the same id).
+Plugin id: `p2p-sharing` (installed from the Viboplr plugin gallery; it is not
+bundled in the app).
 
 > ## ⚠️ This plugin is a UI shell — the P2P engine lives in the host app
 >
@@ -71,8 +71,3 @@ Developer mode (Settings → Debug → Developer) to point at this repo and Relo
 Open DevTools (F12) for `console`/`api.log` output. The host must be a build that
 ships the `api.p2p.*` commands (>= `minAppVersion`).
 
-## Keep the app's bundled copy in sync
-
-The Viboplr app bundles a baseline copy at `src-tauri/plugins/p2p-sharing/`.
-After a release, copy the plugin files back into that folder so fresh installs
-ship the latest baseline.
